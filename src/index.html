@@ -9,6 +9,36 @@
     <header></header>
     <main></main>
     <footer></footer>
+      <div class="contenedor">
+        <section class="tarjeta" id="tarjeta">
+          <div class="datos">
+              <div class="grupo1" id="numero">
+                <p  class="label"> Número de tarjeta</p>
+                <p class="numero"> #### #### #### ####</p>
+            </div>
+           </div>
+
+        </section>
+
+      <!-- Formulario -->
+		<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+			<div class="grupo">
+				<label for="inputNumero">Número Tarjeta</label>
+				<input type="text" id="inputNumero"  maxlength="16" autocomplete="off">
+			</div>
+			<div class="grupo" >
+				<label for="inputNombre">Nombre</label>
+				<input type="text" id="inputNombre"  maxlength="19" autocomplete="off">
+			</div>
+			
+			<button type="submit" class="btn-enviar">Enviar</button>
+			
+
+		</form>
+
+
+      </div>
+
     <script src="index.js" type="module"></script>
   </body>
 </html>
