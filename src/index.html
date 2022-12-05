@@ -7,37 +7,47 @@
   </head>
   <body>
     <header></header>
-    <main></main>
-    <footer></footer>
-      <div class="contenedor">
-        <section class="tarjeta" id="tarjeta">
-          <div class="datos">
-              <div class="grupo1" id="numero">
-                <p  class="label"> Número de tarjeta</p>
-                <p class="numero"> #### #### #### ####</p>
-            </div>
+    <main class="main-container">
+      <section class="main-container_background-section">
+        <div class="card">
+          <p class="card_number">0000 0000 0000 0000 </p>
+          <div class="card_details">
+            <p class="card_details-name"> Nombre de usuario </p>
+            <p> <span class="card_month"> 00 </span></span class="card_year"> 00</p>
+
+          </div>
+
+        </div>
+
+      </section class="main-container__form-section">
+        <form class="form" action="">
+          
+          <label class="form__label" for="cardholder"> Cardholder Name</label>
+          <input class="form__input" type=""text name="cardholder" id="cardholder" placeholder="ej: Diana Guaiña">
+          <div class="form__cardholder--error error"> No puede estar vacío </div>
+          <label class="form__label" for="cardNumber"> Card Number </label>
+          <input class="form__input" type="text" name="cardNumber" id="cardNumber" maxlength="19" placeholder="4584 4896 7899 4822">
+          <div class="form__cardnumber--error error"> No puede estar vacío </div>  
+          <div class="form__label-date"> <!-- grid -->
+            
+              <label class="form__label" for="">Exp. Date (MM/YY) </label>
+               <div class="form__date">
+                <input class="form__input" type="text" maxlength="2" name="cardMonth" placeholder="MM">
+                <input class="form__input" type="text" maxlength="2" name="cardYear" placeholder="AA">
+               </div>
+               <!--  -->
+               <div class= "form__errors-container">  
+                  <div class="form__input-month--error error"> No puede estar vacío  </div>
+                  <div class="form__input-year--error error"> No puede estar vacío </div>
+               </div>
+              
+
            </div>
+           <input class="form__submit" type="submit" value="Confirm">
+        </form>
 
-        </section>
-
-      <!-- Formulario -->
-		<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
-			<div class="grupo">
-				<label for="inputNumero">Número Tarjeta</label>
-				<input type="text" id="inputNumero"  maxlength="16" autocomplete="off">
-			</div>
-			<div class="grupo" >
-				<label for="inputNombre">Nombre</label>
-				<input type="text" id="inputNombre"  maxlength="19" autocomplete="off">
-			</div>
-			
-			<button type="submit" class="btn-enviar">Enviar</button>
-			
-
-		</form>
-
-
-      </div>
+  
+         
 
     <script src="index.js" type="module"></script>
   </body>

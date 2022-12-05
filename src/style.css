@@ -1,3 +1,5 @@
+
+
 *{
     padding: 0;
     margin: 0;
@@ -5,76 +7,128 @@
 }
 
 body {
-    background: #908ded;
+    background: #012F63;
     font-family: 'Lato', sans-serif;
-
+    font-size: 18px;
 }
 
-.contenedor{
-width: 90%;
-max-width: 1000px;
-padding: 40px 20px;
-margin: auto;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-/* tarjeta*/
-
-.tarjeta{
-width: 100%;
-max-width: 550px;
-position: relative;
-z-index: 2;
-}
-
-.tarjeta>div{
-    padding: 30px;
-    border-radius: 15px;
-    min-height: 345px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.main-container{
+    border: 1px solid rgb(200, 183, 216);  
+    width: 375px;
+    height: 200px;
+    margin: auto; 
     
-    }
+    
+}
 
-.tarjeta{
+.main-container_background-section{
     background-image: url(https://www.equipeweb.com.br/wp-content/uploads/2022/10/Como-solicitar-la-Tarjeta-de-Credito-BBVA-Mastercard-Gold-1-768x481.png);
     background-size: cover;
-    display: flex;
-    justify-content: space-between;
     margin-top: 50px;
-}
-
-.grupo1{
-    margin-top: 200px;
+    padding: 25px;
+    border-radius: 15px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
     
 
+     
 }
 
-
-
-.formulario-tarjeta{
-    margin-top: 30px;
-    background: rgb(237, 234, 248);
-    border-radius: 10px;
-    padding: 120px;
-    min-height: 300px;
-    text-align: center;
-    margin: 20px auto;
-    transform-style: preserve-3d;
-
+.main-container__form-section{
+    margin-top: 50px;
+    border: 1px solid rgb(200, 183, 216);  
+    padding: 100px 24px 45px;
+    width: 180%;
+    height: 00px;
+    
 }
 
-button {
-    width: 200px;
-    display: block;
-    margin: auto;
-    margin-top: 20px;
+/*/ media query/*/
+@media (min-width:1440px){
+    .main-container{
+        width: 1440px;
+        display:flex;
+    }
+}
+
+.card{
+    border: 1px solid white;
+    
+    width: 288px;
+    height: 160px;
     padding: 10px;
-    background-color: rgb(55, 180, 230);
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    font-size: 20px;
-  }
+    display: block;
+    font-size: 14px;
+    justify-content: space-between;
+    text-transform: uppercase;
+    position: relative;
+    
+}
+card_number{
+    font-size: 12px;
+    justify-content: space-between;
+    text-transform: uppercase;
+    position: absolute;
+}
+.form__label{
+    font-size: 12px;
+    letter-spacing: 2px;
+    
+    display: block;
+    margin-bottom: 8px;
+    font-weight:  bold;
+    padding-left: 10px;
+
+}
+
+.form__input{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    font-family: sans-serif;
+    border: 1px solid;
+    padding-left: 10px;
+    font-size: 12px;
+    outline: none;
+    
+}
+
+.form__date{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*/ para agregar espacio horizontal - uno al lado del otro - se aplica para el flex y grid /*/
+    gap: 0 16px;    
+    display: flex;
+}
+
+.form__submit{
+    background-color:#FE667B ;
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;}
+
+  .error{
+    color: red;
+      /*/ -10 si quieres que baje... 0 a los lados y 18 a la parte inferior /*/
+    margin: -10px 0 18px;
+    font-size: 10px;
+      }  
+
+    .form__errors-container{
+        display: flex;
+        /*/ gap genera el espacio horizontal entre dos input  /*/
+        gap: 20px;
+
+    }
+
+    .form__errors-container div{
+        width: 200px;
+    }
+

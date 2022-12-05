@@ -1,17 +1,14 @@
 import validator from './validator.js';
+// como es una clase se debe poner . 
+//let nameCard=document.querySelector('.card_details-name');
+// si es un ID se pone #
+let inputName=document.querySelector('#cardholder');
+let inpuNumber=document.querySelector('#cardNumber');
+let nameErrorDiv=document.querySelector('.form__cardnumber--error');
 
-const formulario=document.querySelector("formulario-tarjeta")
-
-/*/Crear evento /*/
-formulario.addEventListener("submit", ingresarD)
-
-function ingresarD(){
-    
-    const ntarjeta=document.querySelector("inputNumero")
-    const nombre=document.querySelector("inputNombre")
-
-    const resultado=document.getElementById("resultado")
-    alert("Ingresa un número de tarjeta correcto")
-
-
-}
+    inputNumber.addEventListener('input', ()=>{
+        console.log();
+        let regExp=/[a-z]/g ;
+        console.log(regExp.test(12342))
+    nameCard.inner =inputName.value;
+    });
