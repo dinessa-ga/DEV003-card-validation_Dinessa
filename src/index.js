@@ -1,14 +1,28 @@
 import validator from './validator.js';
-// como es una clase se debe poner . 
+// para el uso de querySelector como es una clase se debe poner . 
 //let nameCard=document.querySelector('.card_details-name');
 // si es un ID se pone #
-let inputName=document.querySelector('#cardholder');
-let inpuNumber=document.querySelector('#cardNumber');
-let nameErrorDiv=document.querySelector('.form__cardnumber--error');
+//const inputName=document.querySelector('#cardholder')
+const inputName=document.querySelector('#cardholder');
+const inputNumber=document.querySelector('#cardNumber');
+const inputMonth=document.querySelector('#cardMonth');
+const inputYear=document.querySelector('#cardYear');
+const nameErrorDiv=document.querySelector('.form__cardnumber--error');
+const buttonCheck=document.querySelector('.form__submit');
 
-    inputNumber.addEventListener('input', ()=>{
-        console.log();
-        let regExp=/[a-z]/g ;
-        console.log(regExp.test(12342))
-    nameCard.inner =inputName.value;
-    });
+inputNumber.addEventListener('input', ()=> {
+  const regExp=/[a-z]/g;
+  if(regExp.test(inputNumber.value)){
+    nameErrorDiv.textContent="Solo ingresa números";
+  }else{
+    nameErrorDiv.textContent="";
+  }
+}); 
+
+buttonCheck.addEventListener('click', ()=>{
+  if(inputName.value==='' || inputNumber.value==='' || inputMonth.value==='' || inputYear.value===''){
+    alert ('Completa todos los campos');
+    return false
+  }
+});
+console.log(validator);

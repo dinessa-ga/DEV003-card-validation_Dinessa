@@ -13,7 +13,7 @@ body {
 }
 
 .main-container{
-    border: 1px solid rgb(200, 183, 216);  
+     
     width: 375px;
     height: 200px;
     margin: auto; 
@@ -36,11 +36,10 @@ body {
 }
 
 .main-container__form-section{
-    margin-top: 50px;
-    border: 1px solid rgb(200, 183, 216);  
-    padding: 100px 24px 45px;
-    width: 180%;
-    height: 00px;
+        
+    padding: 50px 24px 45px;
+
+   
     
 }
 
@@ -53,11 +52,11 @@ body {
 }
 
 .card{
-    border: 1px solid white;
+    
     
     width: 288px;
     height: 160px;
-    padding: 10px;
+    padding: 100px 5px 45px;
     display: block;
     font-size: 14px;
     justify-content: space-between;
@@ -71,10 +70,13 @@ card_number{
     text-transform: uppercase;
     position: absolute;
 }
+
+
+
 .form__label{
     font-size: 12px;
     letter-spacing: 2px;
-    
+    color: #A7BBC3;
     display: block;
     margin-bottom: 8px;
     font-weight:  bold;
@@ -115,10 +117,10 @@ card_number{
     cursor: pointer;}
 
   .error{
-    color: red;
+    color: rgb(235, 225, 225);
       /*/ -10 si quieres que baje... 0 a los lados y 18 a la parte inferior /*/
     margin: -10px 0 18px;
-    font-size: 10px;
+    font-size: 12px;
       }  
 
     .form__errors-container{

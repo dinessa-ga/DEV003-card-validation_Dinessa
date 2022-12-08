@@ -9,31 +9,32 @@
     <header></header>
     <main class="main-container">
       <section class="main-container_background-section">
-        <div class="card">
-          <p class="card_number">0000 0000 0000 0000 </p>
-          <div class="card_details">
-            <p class="card_details-name"> Nombre de usuario </p>
-            <p> <span class="card_month"> 00 </span></span class="card_year"> 00</p>
+          <div class="card">
+            <p class="card_number">0000 0000 0000 0000 </p>
+            <div class="card_details">
+              <p class="card_details-name"> Nombre de usuario </p>
+              <p> <span class="card_month"> 00 </span></span class="card_year"> 00</p>
 
-          </div>
+            </div>
 
         </div>
 
-      </section class="main-container__form-section">
+      </section >
+      <section class="main-container__form-section"> 
         <form class="form" action="">
           
           <label class="form__label" for="cardholder"> Cardholder Name</label>
-          <input class="form__input" type=""text name="cardholder" id="cardholder" placeholder="ej: Diana Guaiña">
+          <input class="form__input" type="text" name="cardholder" id="cardholder" placeholder="ej: Diana Guaiña">
           <div class="form__cardholder--error error"> No puede estar vacío </div>
           <label class="form__label" for="cardNumber"> Card Number </label>
           <input class="form__input" type="text" name="cardNumber" id="cardNumber" maxlength="19" placeholder="4584 4896 7899 4822">
           <div class="form__cardnumber--error error"> No puede estar vacío </div>  
           <div class="form__label-date"> <!-- grid -->
             
-              <label class="form__label" for="">Exp. Date (MM/YY) </label>
+              <label class="form__label" for="" id="form__exp-date">Exp. Date (MM/YY) </label>
                <div class="form__date">
-                <input class="form__input" type="text" maxlength="2" name="cardMonth" placeholder="MM">
-                <input class="form__input" type="text" maxlength="2" name="cardYear" placeholder="AA">
+                <input class="form__input" type="number" maxlength="2" name="cardMonth" id="cardMonth" placeholder="MM">
+                <input class="form__input" type="number" maxlength="2" name="cardYear" id="cardYear" placeholder="AA">
                </div>
                <!--  -->
                <div class= "form__errors-container">  
@@ -43,9 +44,9 @@
               
 
            </div>
-           <input class="form__submit" type="submit" value="Confirm">
+           <input class="form__submit" type="submit" value="Enviar">
         </form>
-
+      </section>
   
          
 
