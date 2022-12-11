@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const validator = {
   
   // ...
@@ -12,7 +13,7 @@ const validator = {
     for (let i = 0; i < numToString.length; i++) {
     //la posicion del index es inpar
       if (i % 2 === 0) {                        
-        //Cuando el resulta da mas de 9   
+        //Cuando el resulta da mas de 9    
         oddSum += numToString[i];
          
       } else {
@@ -27,10 +28,6 @@ const validator = {
 
     }
   }
-
-
-
-}
-
+};
 
 export default validator;

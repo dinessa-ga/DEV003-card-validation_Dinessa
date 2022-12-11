@@ -7,22 +7,24 @@ const inputName=document.querySelector('#cardholder');
 const inputNumber=document.querySelector('#cardNumber');
 const inputMonth=document.querySelector('#cardMonth');
 const inputYear=document.querySelector('#cardYear');
-const nameErrorDiv=document.querySelector('.form__cardnumber--error');
+const numberErrorDiv=document.querySelector('.form__cardnumber--error');
 const buttonCheck=document.querySelector('.form__submit');
+
 
 inputNumber.addEventListener('input', ()=> {
   const regExp=/[a-z]/g;
+  
+
   if(regExp.test(inputNumber.value)){
-    nameErrorDiv.textContent="Solo ingresa números";
+    numberErrorDiv.textContent="Solo ingresa números";
   }else{
-    nameErrorDiv.textContent="";
+    numberErrorDiv.textContent="";
   }
 }); 
 
 buttonCheck.addEventListener('click', ()=>{
-  if(inputName.value==='' || inputNumber.value==='' || inputMonth.value==='' || inputYear.value===''){
-    alert ('Completa todos los campos');
-    return false
-  }
+
 });
 console.log(validator);
+
+

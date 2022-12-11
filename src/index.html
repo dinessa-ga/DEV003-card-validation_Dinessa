@@ -24,22 +24,22 @@
         <form class="form" action="">
           
           <label class="form__label" for="cardholder"> Cardholder Name</label>
-          <input class="form__input" type="text" name="cardholder" id="cardholder" placeholder="ej: Diana Guaiña">
-          <div class="form__cardholder--error error"> No puede estar vacío </div>
+          <input class="form__input" type="text" required="required" name="cardholder" id="cardholder" placeholder="ej: Diana Guaiña">
+          <div class="form__cardholder--error error"> </div>
           <label class="form__label" for="cardNumber"> Card Number </label>
-          <input class="form__input" type="text" name="cardNumber" id="cardNumber" maxlength="19" placeholder="4584 4896 7899 4822">
-          <div class="form__cardnumber--error error"> No puede estar vacío </div>  
+          <input class="form__input" type="text"required="required" name="cardNumber" id="cardNumber" maxlength="16" placeholder="4584 4896 7899 4822">
+          <div class="form__cardnumber--error error">  </div>  
           <div class="form__label-date"> <!-- grid -->
             
               <label class="form__label" for="" id="form__exp-date">Exp. Date (MM/YY) </label>
                <div class="form__date">
-                <input class="form__input" type="number" maxlength="2" name="cardMonth" id="cardMonth" placeholder="MM">
-                <input class="form__input" type="number" maxlength="2" name="cardYear" id="cardYear" placeholder="AA">
+                <input class="form__input" type="text" required="required" maxlength="2" name="cardMonth" id="cardMonth" placeholder="MM">
+                <input class="form__input" type="text" required="required" maxlength="2" name="cardYear" id="cardYear" placeholder="AA">
                </div>
                <!--  -->
                <div class= "form__errors-container">  
-                  <div class="form__input-month--error error"> No puede estar vacío  </div>
-                  <div class="form__input-year--error error"> No puede estar vacío </div>
+                  <div class="form__input-month--error error">  </div>
+                  <div class="form__input-year--error error">  </div>
                </div>
               
 
