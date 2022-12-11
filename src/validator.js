@@ -1,15 +1,13 @@
 /* eslint-disable no-unused-vars */
 const validator = {
   
-  // ...
-  isValid: function validateCard(cardNumber) {
-    // index par e impar
-    // index par e impar
+  isValid:function (creditCardNumber){
+
     let oddSum = 0;
     let evenSum = 0;
  
     // convertirlo en un array y en numero por que arroja un string
-    const numToString = cardNumber.toString().split("").map(Number).reverse();
+    const numToString = creditCardNumber.toString().split("").map(Number).reverse();
     for (let i = 0; i < numToString.length; i++) {
     //la posicion del index es inpar
       if (i % 2 === 0) {                        
@@ -27,6 +25,19 @@ const validator = {
       }
 
     }
+
+  },
+  maskify:function(creditCardNumber){
+
+    if (creditCardNumber.length > 4) {
+      const hideNumbers = "*".repeat(creditCardNumber.length - 4);
+      const showLastFour = creditCardNumber.substring(creditCardNumber.length - 4);
+      const mask = hideNumbers + showLastFour;
+      return mask;
+    }
+    else {
+      return creditCardNumber;
+    } 
   }
 };
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 import validator from './validator.js';
 // para el uso de querySelector como es una clase se debe poner . 
@@ -15,19 +16,21 @@ const concatenar="";
 
 inputNumber.addEventListener('input', ()=> {
   const regExp=/[a-z]/g;
-  
+  const result=validator.isValid(inputNumber);
+  const maskifyNumber=validator.maskify(inputNumber);
 
   if(regExp.test(inputNumber.value)){
     numberErrorDiv.textContent="Solo ingresa números";
   }else{
     numberErrorDiv.textContent="";
+    
   }
 }); 
 
 
-inputNumber.addEventListener('input', ()=>{
-  if(validator.isValid(concatenar)===false){ numberErrorDiv.textContent="Tu tarjeta no es válida"}
-  else{numberErrorDiv.textContent="Tu tarjeta es como sea válida"}
+inputNumber.addEventListener('keydown', function(event){
+  if(validator.isValid(concatenar)===true){ numberErrorDiv.textContent="Tu tarjeta es válida"}
+  else{numberErrorDiv.textContent="Tu tarjeta no es válida"}
 });
 buttonCheck.addEventListener('click', ()=>{
 
