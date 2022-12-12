@@ -12,6 +12,7 @@ const inputMonth=document.querySelector('#cardMonth');
 const inputYear=document.querySelector('#cardYear');
 const numberErrorDiv=document.querySelector('.form__cardnumber--error');
 const buttonCheck=document.querySelector('.form__submit');
+const showIsValid = document.getElementById('showIsValid');
 const concatenar="";
 
 inputNumber.addEventListener('input', ()=> {
@@ -29,17 +30,23 @@ inputNumber.addEventListener('input', ()=> {
 
 
 
-function evaluarTarjeta (){
-  const creditCardNumber = document.getElementById ("inputNumero1").value;
-  if (validator.isValid(creditCardNumber) ===true) {
-    //alert ("tarjeta válida");
-    confirm('su tarjeta '+ validator.maskify(creditCardNumber) + ' es válida.'  +  " Desea continuar con su compra");
-  }else {
-    //alert ("tarjeta no valida");
-    confirm('su tarjeta '+ validator.maskify(creditCardNumber) + ' No es válida.'  +  " Desea continuar con su compra");
-  
+inputNumber.addEventListener('click', validarNumber);
+function validarNumber(){
+  const creditCardNumber = inputNumber.value;
+  const lastfourdigits=validator.maskify(creditCardNumber);
+  inputNumber.value=lastfourdigits;
+  const validation=validator.isValid(creditCardNumber);
+  if(validation===true){
+    numberErrorDiv.textContent="Tu tarjeta es válida";
   }
+  else{
+    numberErrorDiv.textContent='Tu tarjeta no es válida';
+  }
+
 }
+
+  
+  
 buttonCheck.addEventListener('click', ()=>{
 
 });

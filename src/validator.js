@@ -25,6 +25,7 @@ const validator = {
       }
 
     }
+    return(oddSum+evenSum)%10===0;
 
   },
   maskify:function(creditCardNumber){
