@@ -14,7 +14,7 @@ const validator = {
         //Cuando el resulta da mas de 9    
         oddSum += numToString[i];
          
-      } else {
+      } else {  
         //cuando la posicion  del index es par
         if (numToString[i] * 2 > 9) {
           evenSum += ((numToString[i] * 2) - 9);  

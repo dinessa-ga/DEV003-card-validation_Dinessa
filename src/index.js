@@ -32,6 +32,7 @@ inputNumber.addEventListener('keydown', function(event){
   if(validator.isValid(concatenar)===true){ numberErrorDiv.textContent="Tu tarjeta es válida"}
   else{numberErrorDiv.textContent="Tu tarjeta no es válida"}
 });
+
 buttonCheck.addEventListener('click', ()=>{
 
 });
