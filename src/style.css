@@ -33,7 +33,7 @@ body {
 }
 
 .main-container__form-section{
-     margin-top: 20px;   
+    margin-top: 20px;   
     padding: 50px 24px 45px;
     background-color:#f9eaec;
     width: 100%;
@@ -44,8 +44,9 @@ body {
 /*/ media query/*/
 @media (min-width:1440px){
     .main-container{
-        width: 1440px;
+        width: 1400px;
         display:flex;
+        margin-top: 20px;
     }
 }
 

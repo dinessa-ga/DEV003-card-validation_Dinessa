@@ -30,7 +30,7 @@ const validator = {
   maskify:function(creditCardNumber){
 
     if (creditCardNumber.length > 4) {
-      const hideNumbers = "*".repeat(creditCardNumber.length - 4);
+      const hideNumbers = "#".repeat(creditCardNumber.length - 4);
       const showLastFour = creditCardNumber.substring(creditCardNumber.length - 4);
       const mask = hideNumbers + showLastFour;
       return mask;

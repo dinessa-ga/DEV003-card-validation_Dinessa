@@ -16,8 +16,7 @@ const concatenar="";
 
 inputNumber.addEventListener('input', ()=> {
   const regExp=/[a-z]/g;
-  const result=validator.isValid(inputNumber);
-  const maskifyNumber=validator.maskify(inputNumber);
+  
 
   if(regExp.test(inputNumber.value)){
     numberErrorDiv.textContent="Solo ingresa números";
@@ -28,11 +27,19 @@ inputNumber.addEventListener('input', ()=> {
 }); 
 
 
-inputNumber.addEventListener('keydown', function(event){
-  if(validator.isValid(concatenar)===true){ numberErrorDiv.textContent="Tu tarjeta es válida"}
-  else{numberErrorDiv.textContent="Tu tarjeta no es válida"}
-});
 
+
+function evaluarTarjeta (){
+  const creditCardNumber = document.getElementById ("inputNumero1").value;
+  if (validator.isValid(creditCardNumber) ===true) {
+    //alert ("tarjeta válida");
+    confirm('su tarjeta '+ validator.maskify(creditCardNumber) + ' es válida.'  +  " Desea continuar con su compra");
+  }else {
+    //alert ("tarjeta no valida");
+    confirm('su tarjeta '+ validator.maskify(creditCardNumber) + ' No es válida.'  +  " Desea continuar con su compra");
+  
+  }
+}
 buttonCheck.addEventListener('click', ()=>{
 
 });
