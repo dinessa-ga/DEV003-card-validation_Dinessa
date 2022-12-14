@@ -1,17 +1,15 @@
 /* eslint-disable no-unused-vars */
 const validator = {
   
-  isValid:function (creditCardNumber){
-
+  isValid:function (cardNumber){
     let oddSum = 0;
     let evenSum = 0;
- 
-    // convertirlo en un array y en numero por que arroja un string
-    const numToString = creditCardNumber.toString().split("").map(Number).reverse();
+    // convertirlo en un array y en número por que arroje un string
+    const numToString = cardNumber.toString().split("").map(Number).reverse();
     for (let i = 0; i < numToString.length; i++) {
-    //la posicion del index es inpar
+    //la posición del index es inpar
       if (i % 2 === 0) {                        
-        //Cuando el resulta da mas de 9    
+        //Cuando el resultado es mayor a 9    
         oddSum += numToString[i];
          
       } else {  
@@ -23,11 +21,10 @@ const validator = {
           evenSum += (numToString[i]*2);   
         }
       }
-
     }
     return(oddSum+evenSum)%10===0;
-
   },
+
   maskify:function(creditCardNumber){
 
     if (creditCardNumber.length > 4) {

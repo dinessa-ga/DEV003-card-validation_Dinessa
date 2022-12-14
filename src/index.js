@@ -2,40 +2,30 @@
 /* eslint-disable no-unused-vars */
 import validator from './validator.js';
 // para el uso de querySelector como es una clase se debe poner . 
-//let nameCard=document.querySelector('.card_details-name');
 // si es un ID se pone #
 //const inputName=document.querySelector('#cardholder')
-// eslint-disable-next-line no-unused-vars
 const inputName=document.querySelector('#cardholder');
 const inputNumber=document.querySelector('#cardNumber');
 const inputMonth=document.querySelector('#cardMonth');
 const inputYear=document.querySelector('#cardYear');
 const numberErrorDiv=document.querySelector('.form__cardnumber--error');
 const buttonCheck=document.querySelector('.form__submit');
-const showIsValid = document.getElementById('showIsValid');
-const concatenar="";
+
 
 inputNumber.addEventListener('input', ()=> {
   const regExp=/[a-z]/g;
-  
-
   if(regExp.test(inputNumber.value)){
     numberErrorDiv.textContent="Solo ingresa números";
-  }else{
-    numberErrorDiv.textContent="";
-    
-  }
+  }else{ numberErrorDiv.textContent=""}
+
 }); 
-
-
-
 
 inputNumber.addEventListener('click', validarNumber);
 function validarNumber(){
-  const creditCardNumber = inputNumber.value;
-  const lastfourdigits=validator.maskify(creditCardNumber);
+  const cardNumber = inputNumber.value;
+  const lastfourdigits=validator.maskify(cardNumber);
   inputNumber.value=lastfourdigits;
-  const validation=validator.isValid(creditCardNumber);
+  const validation=validator.isValid(cardNumber);
   if(validation===true){
     numberErrorDiv.textContent="Tu tarjeta es válida";
   }
@@ -44,12 +34,11 @@ function validarNumber(){
   }
 
 }
-
-  
   
 buttonCheck.addEventListener('click', ()=>{
-
+  alert("Tu transacción ha terminado, te esperamos en una próxima compra.")
 });
-console.log(validator);
+
+
 
 
