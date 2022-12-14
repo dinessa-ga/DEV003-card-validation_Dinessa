@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tarjeta de crédito válida</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main class="main-container">
+      <section class="main-container_background-section">
+          <div class="card">
+            <p class="card_number">NMIXX [ AD MARE ] 1st Single Album </p>
+            <div class="card_details">
+              <p class="card_details-name"> (CD+64p Photo Book+1ea Photo Card)</p>
+            </div>
+
+        </div>
+
+      </section >
+      <section class="main-container__form-section"> 
+        <form class="form" action="">
+          
+          <label class="form__label" for="cardholder"> Cardholder Name</label>
+          <input class="form__input" type="text" required="required" name="cardholder" id="cardholder" placeholder="ej: Diana Guaiña">
+          <div class="form__cardholder--error error"> </div>
+          <label class="form__label"  for="cardNumber"> Card Number </label>
+          <input class="form__input" type="text" required="required"  name="cardNumber" id="cardNumber" maxlength="16" placeholder="4584 4896 7899 4800">
+          <div class="form__cardnumber--error error">  </div>  
+          <div class="form__label-date"> <!-- grid -->
+            
+              <label class="form__label" for="" id="form__exp-date">Exp. Date (MM/YY) </label>
+               <div class="form__date">
+                <input class="form__input" type="text" required="required" maxlength="2" name="cardMonth" id="cardMonth" placeholder="MM">
+                <input class="form__input" type="text" required="required" maxlength="2" name="cardYear" id="cardYear" placeholder="AA">
+               </div>
+               <!--  -->
+               <div class= "form__errors-container">  
+                  <div class="form__input-month--error error">  </div>
+                  <div class="form__input-year--error error">  </div>
+               </div>
+              
+           </div>
+           <input class="form__submit" type="submit" value="Enviar">
+        </form>
+      </section>  
+    </main>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

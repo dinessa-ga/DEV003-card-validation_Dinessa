@@ -1,0 +1,157 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #012F63;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+.main-container{
+     
+    width: 375px;
+    height: 200px;
+    margin: auto; 
+    
+    
+}
+
+.main-container_background-section{
+    background-image: url(https://m.media-amazon.com/images/I/81e2F9lXfnL._SL1273_.jpg);
+    background-size: cover;
+    margin-top: 10px;
+    padding: 25px;
+    border-radius: 15px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;   
+}
+
+.main-container__form-section{
+    margin-top: 20px;   
+    padding: 30px 24px 45px;
+    background-color:#f9eaec;
+    width: 100%;
+    height:380px;
+    border-radius: 8px; 
+}
+
+/*/ media query/*/
+@media (min-width:1440px){
+    .main-container{
+        width: 1400px;
+        display:flex;
+        margin-top: 20px;
+    }
+}
+
+.card{
+    width: 288px;
+    height: 160px;
+    padding: 130px 5px 45px;
+    display: block;
+    font-size: 14px;
+    color:aliceblue ;
+    font-weight:  bold;
+    justify-content: space-between;
+    text-transform: uppercase;
+    position: relative;
+    
+}
+
+
+
+
+.form__label{
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #1b2022;
+    display: block;
+    margin-bottom: 8px;
+    font-weight:  bold;
+    padding-left: 10px;
+
+}
+
+.form__input{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-family: sans-serif;
+    border: 1px solid;
+    padding-left: 10px;
+    font-size: 12px;
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.form__date{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*/ para agregar espacio horizontal - uno al lado del otro - se aplica para el flex y grid /*/
+    gap: 0 16px;    
+    display: flex;
+}
+
+.form__submit{
+    background-color:#FE667B;
+    border-radius: 8px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    padding: 10px 25px;
+    text-align: center;
+    display: inline-block;
+}
+
+  .error{
+    color: rgb(247, 38, 38);
+      /*/ -10 si quieres que baje... 0 a los lados y 18 a la parte inferior /*/
+    margin: -10px 0 18px;
+    font-size: 12px;
+      }  
+
+    .form__errors-container{
+        display: flex;
+        /*/ gap genera el espacio horizontal entre dos input  /*/
+        gap: 20px;
+
+    }
+
+    .form__errors-container div{
+        width: 200px;
+    }
+
+    .modal-container{
+        display: flex;
+        background-color: #FE667B;
+        align-items: center;
+        justify-content:center ;
+        position: fixed;
+        pointer-events: none;
+        
+        height: 100vh;
+        width: 100vw;
+
+    }
+    .modal{
+        background-color:beige ;
+        width: 600px;
+        max-width: 100%;
+        padding: 30px 50px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        text-align: center;
+
+
+    }
