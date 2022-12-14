@@ -16,7 +16,8 @@ inputNumber.addEventListener('input', ()=> {
   const regExp=/[a-z]/g;
   if(regExp.test(inputNumber.value)){
     numberErrorDiv.textContent="Solo ingresa números";
-  }else{ numberErrorDiv.textContent=""}
+  }
+  
 
 }); 
 
@@ -28,15 +29,22 @@ function validarNumber(){
   const validation=validator.isValid(cardNumber);
   if(validation===true){
     numberErrorDiv.textContent="Tu tarjeta es válida";
+   
   }
   else{
     numberErrorDiv.textContent='Tu tarjeta no es válida';
+    
   }
 
 }
   
 buttonCheck.addEventListener('click', ()=>{
-  alert("Tu transacción ha terminado, te esperamos en una próxima compra.")
+  const formulario=document.querySelector('.form').value;
+  if( formulario === null || formulario.length === 0 || /^\s+$/.test(formulario) ) {
+    return false;
+  }
+  else{alert("Tu transacción ha terminado, te esperamos en una próxima compra.")}
+  return true
 });
 
 
