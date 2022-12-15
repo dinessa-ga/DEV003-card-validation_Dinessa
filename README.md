@@ -15,7 +15,8 @@ El proyecto consiste en una aplicación que permite realizar la compra de álbum
 
 ## 2. Imagen final del proyecto
 
-![imagen-final-del-proyecto](https://dinessa-ga.github.io/DEV003-card-validation_Dinessa/)
+![Image text](https://dinessa-ga.github.io/DEV003-card-validation_Dinessa/)
+
 
 ## 3. Análisis UX
 
@@ -33,7 +34,7 @@ Los usuarios son aquellas personas que realizan compras de álbumes de kpop en l
 * Ingresar datos de: nombre, número de tarjeta de crédito, mes y año.   
 
 **2. Validar en 1 click el número de tarjeta de crédito.**  
-¨Para protección del usuario en 1 click poder enmascarar el número de tarjeta.
+Para protección del usuario en 1 click poder enmascarar el número de tarjeta.
 
 **3. Terminar el proceso con un solo click.**  
 Mediante un click en submit los datos son procesados al instante. No permite terminar el proceso si un campo está vacío.
