@@ -16,7 +16,7 @@ const validator = {
         if (numToString[i] * 2 > 9) {
           sum += ((numToString[i] * 2) - 9);  
         } else {
-          //Caundo el resultado da 9 o menos
+          //Cuando el resultado es <=9
           sum += (numToString[i]*2);   
         }
       }
